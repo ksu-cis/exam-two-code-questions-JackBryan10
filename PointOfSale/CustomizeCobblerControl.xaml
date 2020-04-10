@@ -6,7 +6,50 @@
              xmlns:local="clr-namespace:ExamTwoQuestions.PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock>Customize Cobbler</TextBlock>
+        <Grid>
+        <StackPanel>
+            <TextBlock Text="Customize Cobbler" FontSize="50" FontStyle="Italic"/>
+            <StackPanel>
+                <TextBlock Text="Fruit Filling" FontSize="40"/>
+
+                <StackPanel Orientation="Horizontal" Margin="15,0,0,0">
+                    <RadioButton Name="PeachButton" Click="IsClicked" Margin="3">
+                        <RadioButton.LayoutTransform>
+                            <ScaleTransform ScaleX="4" ScaleY="4" />
+                        </RadioButton.LayoutTransform>
+                    </RadioButton>
+                    <TextBlock Text="Peach" FontSize="40"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="15,0,0,0">
+                    <RadioButton Name="CherryButton" Click="IsClicked" Margin="3">
+                        <RadioButton.LayoutTransform>
+                            <ScaleTransform ScaleX="4" ScaleY="4" />
+                        </RadioButton.LayoutTransform>
+                    </RadioButton>
+                    <TextBlock Text="Cherry" FontSize="40"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="15,0,0,0">
+                    <RadioButton Name="BlueBerryButton" Click="IsClicked" Margin="3">
+                        <RadioButton.LayoutTransform>
+                            <ScaleTransform ScaleX="4" ScaleY="4" />
+                        </RadioButton.LayoutTransform>
+                    </RadioButton>
+                    <TextBlock Text="BlueBerry" FontSize="40"/>
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                <CheckBox IsChecked="{Binding WithIceCream}" Margin="3">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="4" ScaleY="4" />
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+                <TextBlock Text="Served with IceCream" FontSize="40" VerticalAlignment="Center"/>
+            </StackPanel>
+            
+            
+        </StackPanel>
     </Grid>
 </UserControl>
